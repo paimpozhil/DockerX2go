@@ -10,6 +10,14 @@ _word=$( [ ${ROOT_PASS} ] && echo "preset" || echo "random" )
 echo "=> Setting a ${_word} password to the root user"
 echo "root:$PASS" | chpasswd
 
+adduser --disabled-password --gecos "" dockerx 
+adduser dockerx sudo
+DPASS=$(pwgen -s 12 1)
+
+echo "=> Setting a password to the docker user"
+echo "dockerx:$DPASS" | chpasswd
+
+
 echo "=> Done!"
 touch /.root_pw_set
 
@@ -19,5 +27,7 @@ echo ""
 echo "    ssh -p <port> root@<host>"
 echo "and enter the root password '$PASS' when prompted"
 echo ""
+echo " dockerx password : $DPASS "
+echo "use this to connect to the x2go server from your x2go client!"
 echo "Please remember to change the above password as soon as possible!"
 echo "========================================================================"
