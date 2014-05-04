@@ -33,8 +33,8 @@ build it yourself.
 
 ```
 git clone https://github.com/paimpozhil/DockerX2go.git .
-docker build -t [yourimagename] -i .
-CID=(docker run -p 2222:22 -t -d [yourimagename])
+docker build -t [yourimagename] .
+CID=$(docker run -p 2222:22 -t -d [yourimagename])
 
 docker logs $CID
 
