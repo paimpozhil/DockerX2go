@@ -19,7 +19,7 @@ This system also works as a cheap remote-desktop for anyone who wants a desktop 
 Pull from Docker Index and run the image
 
 ```
-$CID = (docker run -p 2222:22 -t -i paimpozhil/dockerx2go)
+$CID = (docker run -p 2222:22 -t -d paimpozhil/dockerx2go)
 docker logs $CID
 
 note down the root/dockerx passwords.
@@ -31,8 +31,8 @@ build it yourself.
 
 ```
 git clone https://github.com/paimpozhil/DockerX2go.git .
-docker build -t -i .
-CID=(docker run -p 2222:22 -t -i [imagename])
+docker build -t [yourimagename] -i .
+CID=(docker run -p 2222:22 -t -d [yourimagename])
 
 docker logs $CID
 
