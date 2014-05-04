@@ -57,8 +57,8 @@ ssh root@dockerhost -p 2222
 
 ###Credits:
 
-http://bmullan.wordpress.com/
-https://github.com/rogaha/docker-desktop
-https://github.com/tutumcloud/tutum-ubuntu
+####http://bmullan.wordpress.com/
+####https://github.com/rogaha/docker-desktop
+####https://github.com/tutumcloud/tutum-ubuntu
 
-Docker.io && x2go.org
+#### Docker.io && x2go.org
