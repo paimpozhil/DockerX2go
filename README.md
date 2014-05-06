@@ -49,6 +49,8 @@ http://wiki.x2go.org/doku.php/doc:installation:x2goclient
 
 Connect to your server with docker hosts's IP , Port : 2222 , Username : root , Password : ( look at docker logs for container)
 
+Select the Session TYPE as : XFCE , this is very important
+
 You can also SSH to the docker container directly with root or dockerx users and their passwords over the port 2222 with linux ssh or windows putty clients.
 
 users dockerx can be used to login however for some reason you need to use root for your very first login then you can use dockerx to login with x2go :)
