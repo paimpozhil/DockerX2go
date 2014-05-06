@@ -2,7 +2,14 @@
 #DockerX2go
 ==========
 
-Xubuntu with X2go preinstalled.
+Docker images which contain different Desktop setups 
+
+Currently we have
+
+1. Xubuntu
+2. LXDE
+
+
 
 ###WHY ?
 
