@@ -1,7 +1,7 @@
 FROM ubuntu:14.04
 MAINTAINER Paimpozhil "paimpozhil@gmail.com"
 
-RUN apt-get update && sudo apt-get upgrade -y
+RUN apt-get update -y && sudo apt-get upgrade -y
 
 ENV DEBIAN_FRONTEND noninteractive
 
