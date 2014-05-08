@@ -7,7 +7,7 @@ Docker images which contain different Desktop setups
 Currently we have
 
 1. Xubuntu
-2. LXDE
+2. LXDE (https://github.com/paimpozhil/DockerX2go/tree/master/lxde)
 
 
 
