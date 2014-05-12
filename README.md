@@ -9,9 +9,11 @@ Currently we have
 1. Xubuntu
 2. LXDE (https://github.com/paimpozhil/DockerX2go/tree/master/lxde)
 
+### Demo
 
+#### http://www.youtube.com/watch?v=uDZv85TdMeg
 
-###WHY ?
+### WHY ?
 
 I want an Isolated thin client server setup that still re-uses the disk/memory for common programs and OS.
 
