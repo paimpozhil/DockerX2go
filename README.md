@@ -6,8 +6,11 @@ Docker images which contain different Desktop setups
 
 Currently we have
 
-1. Xubuntu
-2. LXDE (https://github.com/paimpozhil/DockerX2go/tree/master/lxde)
+1. Xubuntu 14.04 
+2. Ubuntu 14.04 with LXDE 
+3. Centos with XFCE
+
+more coming 
 
 ### Demo
 
@@ -15,16 +18,18 @@ Currently we have
 
 ### WHY ?
 
-I want an Isolated thin client server setup that still re-uses the disk/memory for common programs and OS.
+I wanted Isolated thin client server setup that still re-uses the disk/memory for common programs and OS.
 
-I wanted a full desktop running on the docker so I can painlessly create multiple isolated linux systems to which our thinclients on our offices work with.
+A Full desktop running on the docker so I can painlessly create multiple isolated linux systems to which our thinclients on our offices work with.
 
 Instead of running 20 seperate virtual machines that has the same Kernel/Same applications that take up lot of ram ( 20x) I wanted to use a common VM with same base os/applications and then users can customize the os do anything they want without killing other users/etc.
 
-This system also works as a cheap remote-desktop for anyone who wants a desktop on the cloud for anything from working remotely or browse internet where there are VPN restrictions.
+This system also works as a VERY cheap remote-desktop for anyone who wants a desktop on the cloud for anything from working remotely or browse internet where there are VPN restrictions.
+
+Note you can run like 2-3 desktops over a cheap DigitalOcean/Linode like VPS.
 
 
-### How to run a server?
+### How to run a desktop ?
 
 Pull from Docker Index and run the image
 
