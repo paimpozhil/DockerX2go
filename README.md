@@ -50,7 +50,7 @@ http://wiki.x2go.org/doku.php/doc:installation:x2goclient
 
 Connect to your server with 
 
-Host : <docker system's IP>
+Host : (Your Server IP)
 Port : 2222
 Username : root 
 Password : (varies or could be just 'changeme')
