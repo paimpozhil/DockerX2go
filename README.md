@@ -14,7 +14,56 @@ more coming
 
 ### Demo
 
-#### http://www.youtube.com/watch?v=uDZv85TdMeg
+#### https://www.youtube.com/watch?v=WvVjMF5P-U0
+
+
+### How to run a desktop on Docker ?
+
+```
+git clone https://github.com/paimpozhil/DockerX2go.git 
+cd centos  ## or whatever
+docker build -t [yourimagename] .
+CID=$(docker run -p 2222:22 -t -d [yourimagename])
+
+or simply 
+
+CID=$(docker run -p 2222:22 -t -d paimpozhil/dockerx2go)
+docker logs $CID
+
+note down the root/dockerx passwords.
+
+
+```
+
+Please see README under these for more specific information
+
+https://github.com/paimpozhil/DockerX2go/tree/master/xubuntu
+
+https://github.com/paimpozhil/DockerX2go/tree/master/centos
+
+https://github.com/paimpozhil/DockerX2go/tree/master/lxde
+
+### How to run/connect to server with a Client?
+
+Download the x2go client for your OS from:
+http://wiki.x2go.org/doku.php/doc:installation:x2goclient
+
+Connect to your server with 
+
+Host : <docker system's IP>
+Port : 2222
+Username : root 
+Password : (varies or could be just 'changeme')
+
+Select the Session TYPE as : XFCE or LXDE depending on your setup . 
+
+You can also SSH to the docker container directly with root or dockerx users and their passwords over the port 2222 with linux ssh or windows putty clients.
+
+users dockerx can be used to login however for some reason you need to use root for your very first login then you can use dockerx to login with x2go :)
+
+```
+ssh root@dockerhost -p 2222
+```
 
 ### WHY ?
 
@@ -27,51 +76,6 @@ Instead of running 20 seperate virtual machines that has the same Kernel/Same ap
 This system also works as a VERY cheap remote-desktop for anyone who wants a desktop on the cloud for anything from working remotely or browse internet where there are VPN restrictions.
 
 Note you can run like 2-3 desktops over a cheap DigitalOcean/Linode like VPS.
-
-
-### How to run a desktop ?
-
-Pull from Docker Index and run the image
-
-```
-docker pull paimpozhil/dockerx2go
-CID=$(docker run -p 2222:22 -t -d paimpozhil/dockerx2go)
-docker logs $CID
-
-note down the root/dockerx passwords.
-```
-
-OR
-
-build it yourself.
-
-```
-git clone https://github.com/paimpozhil/DockerX2go.git .
-docker build -t [yourimagename] .
-CID=$(docker run -p 2222:22 -t -d [yourimagename])
-
-docker logs $CID
-
-note the root/dockerx passwords
-```
-
-
-### How to run/connect to server with a Client?
-
-Download the x2go client for your OS from:
-http://wiki.x2go.org/doku.php/doc:installation:x2goclient
-
-Connect to your server with docker hosts's IP , Port : 2222 , Username : root , Password : ( look at docker logs for container)
-
-Select the Session TYPE as : XFCE , this is very important
-
-You can also SSH to the docker container directly with root or dockerx users and their passwords over the port 2222 with linux ssh or windows putty clients.
-
-users dockerx can be used to login however for some reason you need to use root for your very first login then you can use dockerx to login with x2go :)
-
-```
-ssh root@dockerhost -p 2222
-```
 
 ###Credits:
 
