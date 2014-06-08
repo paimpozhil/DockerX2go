@@ -5,7 +5,7 @@ Pull from Docker Index and run the image
 
 ```
 docker pull paimpozhil/docker-centos
-CID=$(docker run -p 2222:22 -t -d paimpozhil/dockerx2go)
+CID=$(docker run -p 2222:22 -t -d paimpozhil/docker-centos)
 ```
 
 OR
