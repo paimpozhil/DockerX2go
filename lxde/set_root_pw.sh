@@ -19,7 +19,7 @@ echo "=> Setting a password to the docker user"
 echo "dockerx:$DPASS" | chpasswd
 
 echo "=> Setting dockerx users group to x2go user"
-usermod dockerx -g x2gouser
+adduser dockerx x2gouser
 
 echo "=> Done!"
 touch /.root_pw_set
