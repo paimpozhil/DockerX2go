@@ -31,8 +31,6 @@ RUN dpkg -i google-chrome*.deb
 
 RUN apt-get install -f
 
-RUN chmod 1777 /dev/shm
-
 RUN ln -s /chrome.sh /usr/bin/chrome
 
 RUN mkdir -p /var/run/sshd && sed -i "s/UsePrivilegeSeparation.*/UsePrivilegeSeparation no/g" /etc/ssh/sshd_config && sed -i "s/UsePAM.*/UsePAM no/g" /etc/ssh/sshd_config
