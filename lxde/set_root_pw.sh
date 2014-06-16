@@ -12,11 +12,14 @@ echo "root:$PASS" | chpasswd
 
 adduser --disabled-password --gecos "" dockerx 
 adduser dockerx sudo
+
 DPASS=$(pwgen -s 12 1)
 
 echo "=> Setting a password to the docker user"
 echo "dockerx:$DPASS" | chpasswd
 
+echo "=> Setting dockerx users group to x2go user"
+usermod dockerx -g x2gouser
 
 echo "=> Done!"
 touch /.root_pw_set
