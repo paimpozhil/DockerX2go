@@ -14,6 +14,9 @@ RUN yum -y install x2goserver x2goserver-xsession x2golxdebindings pwgen firefox
 
 RUN yum -y groupinstall Xfce
 
+## fix the locale crap 
+RUN yum -y reinstall glibc-common
+
 RUN chkconfig sshd on
 
 RUN sed -i "s/UsePAM.*/UsePAM no/g" /etc/ssh/sshd_config
@@ -21,8 +24,8 @@ RUN sed -i "s/#PermitRootLogin/PermitRootLogin/g" /etc/ssh/sshd_config
 
 RUN echo 'root:changeme' | chpasswd
 
+RUN service sshd start
+
 EXPOSE 22
 
-
-ENTRYPOINT ["/sbin/init"]
-
+CMD    ["/usr/sbin/sshd", "-D"]
