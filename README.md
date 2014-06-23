@@ -31,8 +31,6 @@ CID=$(docker run -p 2222:22 -t -d paimpozhil/dockerx2go)
 docker logs $CID
 
 note down the root/dockerx passwords.
-
-
 ```
 
 Please see README under these for more specific information
