@@ -25,7 +25,7 @@ CID=$(docker run -p 2222:22 -t -d [yourimagename])
 Download the x2go client for your OS from:
 http://wiki.x2go.org/doku.php/doc:installation:x2goclient
 
-Connect to your server with docker hosts's IP , Port : 2222 , Username : dockerx , Password : changeme
+Connect to your server with docker hosts's IP , Port : 2222 , Username : dockerx or root , Password : ch@ngem3
 
 Select the Session TYPE as : XFCE , this is very important
 
