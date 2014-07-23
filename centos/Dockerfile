@@ -21,8 +21,11 @@ RUN chkconfig sshd on
 
 RUN sed -i "s/UsePAM.*/UsePAM no/g" /etc/ssh/sshd_config
 RUN sed -i "s/#PermitRootLogin/PermitRootLogin/g" /etc/ssh/sshd_config
+RUN adduser dockerx
 
-RUN echo 'root:changeme' | chpasswd
+
+RUN echo 'root:ch@ngem3' | chpasswd
+RUN echo 'dockerx:ch@ngem3' | chpasswd
 
 
 EXPOSE 22
