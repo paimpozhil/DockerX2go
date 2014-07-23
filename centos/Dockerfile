@@ -27,6 +27,7 @@ RUN adduser dockerx
 RUN echo 'root:ch@ngem3' | chpasswd
 RUN echo 'dockerx:ch@ngem3' | chpasswd
 
+RUN service sshd restart
 
 EXPOSE 22
 
