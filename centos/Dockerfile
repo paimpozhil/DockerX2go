@@ -1,4 +1,4 @@
-FROM centos
+FROM centos:centos6
 
 MAINTAINER paimpozhil@gmail.com
 
@@ -24,7 +24,6 @@ RUN sed -i "s/#PermitRootLogin/PermitRootLogin/g" /etc/ssh/sshd_config
 
 RUN echo 'root:changeme' | chpasswd
 
-RUN service sshd start
 
 EXPOSE 22
 
