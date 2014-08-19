@@ -75,6 +75,11 @@ This system also works as a VERY cheap remote-desktop for anyone who wants a des
 
 Note you can run like 2-3 desktops over a cheap DigitalOcean/Linode like VPS.
 
+
+### Need support?
+
+#### http://dockerteam.com
+
 ###Credits:
 
 ####http://bmullan.wordpress.com/
