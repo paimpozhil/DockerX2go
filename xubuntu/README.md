@@ -4,8 +4,7 @@
 Pull from Docker Index and run the image
 
 ```
-docker pull paimpozhil/dockerx2go
-CID=$(docker run -p 2222:22 -t -d paimpozhil/dockerx2go)
+CID=$(docker run -p 2222:22 -t -d paimpozhil/docker-x2go-xubuntu)
 docker logs $CID
 
 note down the root/dockerx passwords.
