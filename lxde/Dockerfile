@@ -18,6 +18,7 @@ RUN rm -rf /var/lib/dpkg/info/fuse.postinst
 RUN apt-get -y install fuse
 
 RUN apt-get install -y openssh-server lxde software-properties-common python-software-properties
+
 RUN add-apt-repository ppa:x2go/stable
 
 RUN apt-get update
