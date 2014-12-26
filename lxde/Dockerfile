@@ -23,7 +23,7 @@ RUN add-apt-repository ppa:x2go/stable
 
 RUN apt-get update
 
-RUN apt-get install x2goserver x2goserver-xsession x2golxdebindings pwgen firefox pulseaudio libcurl3 -y
+RUN apt-get install x2goserver x2goserver-xsession x2golxdebindings pwgen firefox pulseaudio libcurl3 libappindicator1 -y
 
 RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
