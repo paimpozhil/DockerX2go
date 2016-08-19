@@ -25,14 +25,6 @@ RUN apt-get update
 
 RUN apt-get install x2goserver x2goserver-xsession x2golxdebindings pwgen firefox pulseaudio libcurl3 libappindicator1 -y
 
-RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-
-RUN dpkg -i google-chrome*.deb
-
-RUN apt-get install -f
-
-RUN ln -s /chrome.sh /usr/bin/chrome
-
 RUN mkdir -p /var/run/sshd && sed -i "s/UsePrivilegeSeparation.*/UsePrivilegeSeparation no/g" /etc/ssh/sshd_config && sed -i "s/UsePAM.*/UsePAM no/g" /etc/ssh/sshd_config
 RUN sed -i "s/PermitRootLogin.*/PermitRootLogin yes/g" /etc/ssh/sshd_config
 RUN sed -i "s/#PasswordAuthentication/PasswordAuthentication/g" /etc/ssh/sshd_config
