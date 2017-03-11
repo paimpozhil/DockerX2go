@@ -1,4 +1,5 @@
 FROM ubuntu:trusty
+MAINTAINER Paimpozhil "paimpozhil@gmail.com"
 
 RUN apt-get update -y && sudo apt-get upgrade -y
 
