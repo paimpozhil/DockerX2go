@@ -6,7 +6,7 @@ Docker images which contain different Desktop setups
 
 Currently we have
 
-1. Xubuntu 14.04 
+1. Xubuntu 16.04 
 2. Ubuntu 14.04 with LXDE 
 3. Centos with XFCE
 
